@@ -41,11 +41,11 @@ const Crew = () => {
 
     return (
         <div className="crew">
-            <div className="container">
+            <div className="container" style={{ backgroundImage: `url(${dataItems[crewContext!.id]})` }}>
                 <div className="title">
                     <h2><span>02 </span> MEET YOUR CREW</h2>
                 </div>
-                <div className="content">
+                <div className="content" >
                     <h3>{datas[crewContext!.id].role}</h3>
                     <h2>{datas[crewContext!.id].name}</h2>
                     <p>{datas[crewContext!.id].bio}</p>
@@ -56,8 +56,8 @@ const Crew = () => {
                     <div className="sphere-3"></div>
                     <div className="sphere-4"></div>
                 </div>
-                <img src={dataItems[crewContext!.id]} />
             </div>
+            {/* <img src={dataItems[crewContext!.id]} /> */}
         </div>
     );
 };

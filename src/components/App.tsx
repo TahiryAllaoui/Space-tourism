@@ -6,6 +6,7 @@ import Destination from './Destination'
 import DestinationContexe, { DestinationContextType } from '../context/destinationContext'
 import { useState } from 'react'
 import Crew from './Crew'
+import CrewContexe, { CrewContextType } from '../context/crewContext'
 
 function App() {
   const [destinationId, setDestinationId] = useState(0);
@@ -14,7 +15,7 @@ function App() {
     setId: setDestinationId
   };
 
-  const [crewId, setCrewId] = useState(0); 
+  const [crewId, setCrewId] = useState(0);
   let crew: CrewContextType = {
     id: crewId,
     setId: setCrewId
@@ -24,14 +25,16 @@ function App() {
   return (
     <BrowserRouter>
       <DestinationContexe.Provider value={destination}>
-        <div className='app'>
-          <Navbar />
-          <Routes>
-            <Route path='/' element={<Home />} />
-            <Route path='/destination' element={<Destination />} />
-            <Route path='/crew' element={<Crew />} />
-          </Routes>
-        </div>
+        <CrewContexe.Provider value={crew}>
+          <div className='app'>
+            <Navbar />
+            <Routes>
+              <Route path='/' element={<Home />} />
+              <Route path='/destination' element={<Destination />} />
+              <Route path='/crew' element={<Crew />} />
+            </Routes>
+          </div>
+        </CrewContexe.Provider>
       </DestinationContexe.Provider>
     </BrowserRouter>
   )
