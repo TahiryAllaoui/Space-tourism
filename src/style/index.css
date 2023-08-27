@@ -1,0 +1,33 @@
+@font-face {
+  font-family: 'Bellefair';
+  src: url('../assets/fonts/Bellefair-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Barlow';
+  src: url('../assets/fonts/Barlow-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Barlow-Condensed';
+  src: url('../assets/fonts/BarlowCondensed-Regular.ttf');
+}
+
+:root {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Bellefair', sans-serif;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  font-family: 'Bellefair', sans-serif;
+}
