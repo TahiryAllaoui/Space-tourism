@@ -63,9 +63,11 @@ const Destination = () => {
             <div className="container">
                 <img src={dataImages[destinationContext!.id]} alt="" />
                 <div className="content-text">
-                    {[0, 1, 2, 3].map((i) => <div key={i} onClick={() => handleClick(i)}>
-                        {datas[i].name}
-                    </div>)}
+                    <div className="inner-nav">
+                        {[0, 1, 2, 3].map((i) => <div key={i} onClick={() => handleClick(i)}>
+                            {datas[i].name}
+                        </div>)}
+                    </div>
                     <div className="destination-description">
                         <h2>{datas[destinationContext!.id].name}</h2>
                         <p>{datas[destinationContext!.id].description}</p>

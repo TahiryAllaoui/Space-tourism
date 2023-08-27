@@ -31,7 +31,8 @@ nav {
     }
 
     .nav-item-blur {
-        backdrop-filter: blur(5rem);
+        background: rgba(255, 255, 255, 0.04);
+        backdrop-filter: blur(40.774227142333984px);
         width: 60%;
         display: flex;
         align-items: center;
@@ -53,6 +54,7 @@ nav {
                 height: 100%;
                 gap: 0.3rem;
                 text-decoration: none;
+                font-size: 1.5rem;
 
                 &:hover {
                     border-bottom: 3px solid white;
@@ -61,7 +63,6 @@ nav {
                 .numero {
                     color: #FFF;
                     font-family: 'Barlow-Condensed';
-                    font-size: 16px;
                     font-style: normal;
                     font-weight: 700;
                     line-height: normal;
@@ -71,7 +72,6 @@ nav {
                 .label {
                     color: #FFF;
                     font-family: 'Barlow-Condensed';
-                    font-size: 16px;
                     font-style: normal;
                     font-weight: 400;
                     line-height: normal;
