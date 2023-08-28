@@ -1,5 +1,19 @@
 @import '../style/fonts.scss';
 
+@keyframes opac {
+    0% {
+        opacity: 0%;
+    }
+
+    50% {
+        opacity: 50%;
+    }
+
+    100% {
+        opacity: 100%;
+    }
+}
+
 .destination {
     background: url('../assets/destination/background-destination-desktop.jpg') no-repeat;
     background-size: cover;
@@ -39,6 +53,7 @@
     align-items: center;
     width: 80%;
     height: 55%;
+    animation: 1s 'fade' ease-out;
 
     img {
         width: 25rem;
@@ -54,6 +69,8 @@
             width: 50%;
 
             div {
+                transition: all 200ms ease;
+                cursor: pointer;
                 width: fit-content;
                 padding: 1rem 0;
                 color: #FFF;
@@ -63,6 +80,7 @@
                 font-weight: 400;
                 line-height: normal;
                 letter-spacing: 2.7px;
+                border-bottom: 2px solid transparent;
 
                 &:hover {
                     border-bottom: 2px solid white;
@@ -71,6 +89,8 @@
         }
 
         .destination-description {
+            transition: all opacity 3000;
+
             h2 {
                 padding: 0;
                 margin: 0;

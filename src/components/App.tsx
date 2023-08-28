@@ -7,6 +7,8 @@ import DestinationContexe, { DestinationContextType } from '../context/destinati
 import { useState } from 'react'
 import Crew from './Crew'
 import CrewContexe, { CrewContextType } from '../context/crewContext'
+import Tech from './Tech'
+import TechContexe, { TechContextType } from '../context/techContext'
 
 function App() {
   const [destinationId, setDestinationId] = useState(0);
@@ -19,6 +21,12 @@ function App() {
   let crew: CrewContextType = {
     id: crewId,
     setId: setCrewId
+  };
+
+  const [techId, setTechId] = useState(0);
+  let tech: TechContextType = {
+    id: techId,
+    setId: setTechId
   }
 
 
@@ -26,14 +34,17 @@ function App() {
     <BrowserRouter>
       <DestinationContexe.Provider value={destination}>
         <CrewContexe.Provider value={crew}>
-          <div className='app'>
-            <Navbar />
-            <Routes>
-              <Route path='/' element={<Home />} />
-              <Route path='/destination' element={<Destination />} />
-              <Route path='/crew' element={<Crew />} />
-            </Routes>
-          </div>
+          <TechContexe.Provider value={tech}>
+            <div className='app'>
+              <Navbar />
+              <Routes>
+                <Route path='/' element={<Home />} />
+                <Route path='/destination' element={<Destination />} />
+                <Route path='/crew' element={<Crew />} />
+                <Route path='/technology' element={<Tech />} />
+              </Routes>
+            </div>
+          </TechContexe.Provider>
         </CrewContexe.Provider>
       </DestinationContexe.Provider>
     </BrowserRouter>

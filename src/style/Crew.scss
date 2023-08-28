@@ -12,15 +12,14 @@
         background-position-y: bottom;
         background-attachment: fixed;
         background-repeat: no-repeat;
-        background-size: 445px;
+        background-size: 444px;
         height: 100%;
         display: flex;
-        border: 1px solid white;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
         justify-content: flex-start;
-        gap: 5rem;
+        gap: 2rem;
 
         .title {
             h2 {
@@ -48,7 +47,7 @@
 
         .content {
             h3 {
-                margin: 5rem 0 0 0;
+                margin: 0 0 0 0;
                 color: #D0D6F9;
                 font-family: Bellefair;
                 font-size: 32px;
@@ -79,11 +78,35 @@
                 line-height: 32px;
             }
         }
-    }
 
-    img {
-        position: absolute;
-        top: 0;
+        .sphere-button {
+            width: 50%;
+            height: 5%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+            position: absolute;
+            top: 38rem;
+            left: 5rem;
 
+
+            .sphere-0,
+            .sphere-1,
+            .sphere-2,
+            .sphere-3 {
+                opacity: 0.1744;
+                background-color: white;
+                width: 15px;
+                height: 15px;
+                cursor: pointer;
+                border-radius: 100%;
+
+                &:hover {
+                    opacity: 0.5;
+                    background-color: rgba(255, 255, 255, 0.505);
+                }
+            }
+        }
     }
 }

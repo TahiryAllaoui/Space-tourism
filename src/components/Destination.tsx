@@ -3,7 +3,7 @@ import moon from '../assets/destination/image-moon.png';
 import mars from '../assets/destination/image-mars.png';
 import europa from '../assets/destination/image-europa.png';
 import titan from '../assets/destination/image-titan.png';
-import { useContext } from 'react'
+import { useContext, useEffect } from 'react'
 import DestinationContexe from '../context/destinationContext';
 
 interface data {
@@ -52,10 +52,32 @@ const Destination = () => {
     }];
 
     const dataImages = [moon, mars, europa, titan];
-
     const handleClick = (i: number) => {
         destinationContext!.setId(i);
     };
+
+    // useEffect(() => {
+    //     let image = document.querySelector('.container img') as HTMLImageElement;
+    //     let description = document.querySelector('.destination-description') as HTMLDivElement;
+    //     let detail = document.querySelector('.destination-detail') as HTMLDivElement;
+    //     // image.style.opacity = '0';
+    //     // description.style.opacity = '0';
+    //     // detail.style.opacity = '0';
+    //     // setTimeout(() => {
+    //     //     image.style.animationName = 'fondue';
+    //     //     image.style.animat
+    //     // }, 300)
+    //     const fadeAnimation = `@keyframes fade {
+    //         0% { opacity: 0%; }    
+    //         100% { opacity: 100%; }
+    //     }`;
+    //     const styleElement = document.createElement('style');
+    //     styleElement.appendChild(document.createTextNode(fadeAnimation))
+    //     document.head.appendChild(styleElement);
+
+    //     image.style.animation = 'fade 1s ease-out';
+
+    // }, [destinationContext!.id])
 
     return (
         <div className="destination">

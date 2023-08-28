@@ -36,8 +36,11 @@ const Crew = () => {
         role: "Flight Engineer",
         bio: "Anousheh Ansari is an Iranian American engineer and co-founder of Prodea Systems. Ansari was the fourth self-funded space tourist, the first self-funded woman to fly to the ISS, and the first Iranian in space."
     }];
-
     const dataItems = [douglas, mark, victor, anousheh];
+
+    const handleClick = (i: number) => {
+        crewContext!.setId(i);
+    };
 
     return (
         <div className="crew">
@@ -51,13 +54,12 @@ const Crew = () => {
                     <p>{datas[crewContext!.id].bio}</p>
                 </div>
                 <div className="sphere-button">
-                    <div className="sphere-1"></div>
-                    <div className="sphere-2"></div>
-                    <div className="sphere-3"></div>
-                    <div className="sphere-4"></div>
+                    {
+                        [0, 1, 2, 3].map((i) => <div className={`sphere-${i}`} key={i} onClick={() => handleClick(i)}
+                            style={crewContext!.id == i ? { opacity: '100%' } : { opacity: '0.1744' }}></div>)
+                    }
                 </div>
             </div>
-            {/* <img src={dataItems[crewContext!.id]} /> */}
         </div>
     );
 };
