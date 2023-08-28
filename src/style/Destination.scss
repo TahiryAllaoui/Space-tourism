@@ -117,7 +117,7 @@
         }
 
         .destination-detail {
-            border-top: 2px rgba(255, 255, 255, 0.411) solid;
+            border-top: 2px #383B4B solid;
             display: flex;
             width: 100%;
             justify-content: flex-start;
@@ -148,6 +148,105 @@
                 }
             }
 
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .destination {
+        background: url('../assets/destination/background-destination-tablet.jpg') no-repeat fixed;
+        background-size: cover;
+        height: 1024px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding: 0 2rem;
+        margin: 0;
+
+        .title {
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            letter-spacing: 3.375px;
+            text-transform: uppercase;
+
+            span {
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: normal;
+                letter-spacing: 3.375px;
+            }
+        }
+
+        .container {
+            width: 90%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: unset;
+            gap: 3rem;
+
+            img {
+                width: 15rem;
+                height: 15rem;
+            }
+
+            .content-text {
+                height: 100%;
+                width: 75%;
+                align-items: center;
+                display: flex;
+                flex-direction: column;
+
+                .destination-description {
+                    h2 {
+                        padding: 1rem 0;
+                        font-size: 80px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: normal;
+                        text-align: center;
+                    }
+
+                    p {
+                        width: 573px;
+                        text-align: center;
+                        font-size: 16px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 28px;
+                    }
+
+                    margin-bottom: 2rem;
+                }
+
+                .destination-detail {
+                    padding-top: 2rem;
+                    justify-content: center;
+
+                    h3 {
+                        text-align: center;
+                        font-size: 14px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: normal;
+                        letter-spacing: 2.362px;
+                        text-transform: uppercase;
+                    }
+
+                    p {
+                        text-align: center;
+                        font-size: 28px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: normal;
+                        text-transform: uppercase;
+                    }
+                }
+            }
         }
     }
 }
