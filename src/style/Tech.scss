@@ -109,15 +109,18 @@
 
         .sary {
             position: absolute;
-            width: 552px;
-            height: 100vh;
-            left: 60%;
+            left: 68%;
+            top: -5%;
+            position: absolute;
+            width: 450px;
+            height: 858px;
             display: flex;
             align-items: center;
             justify-content: flex-end;
 
             img {
                 width: 100%;
+                height: auto;
             }
         }
     }

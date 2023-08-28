@@ -1,7 +1,7 @@
 import '../style/Tech.scss';
-import vehicle from '../assets/technology/image-launch-vehicle-landscape.jpg';
-import port from '../assets/technology/image-spaceport-landscape.jpg';
-import capsule from '../assets/technology/image-space-capsule-landscape.jpg';
+import vehicle from '../assets/technology/image-launch-vehicle-portrait.jpg';
+import port from '../assets/technology/image-spaceport-portrait.jpg';
+import capsule from '../assets/technology/image-space-capsule-portrait.jpg';
 import TechContexe from '../context/techContext';
 import { useContext } from 'react';
 
@@ -46,7 +46,7 @@ const Tech = () => {
                         <p>{datas[techContext!.id].description}</p>
                     </div>
                 </div>
-                <div className='sary'>
+                <div className='sary' style={{ backgroundImage: datasItem[techContext!.id] }} >
                     <img src={datasItem[techContext!.id]} alt="" />
                 </div>
             </div>
