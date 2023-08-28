@@ -13,9 +13,11 @@
 }
 
 @media (max-width: 768px) {
-  .app {}
+  .app {
+    height: 1024px;
+  }
 
   #root {
-    // overflow: hidden;
+    height: 1024px;
   }
 }
