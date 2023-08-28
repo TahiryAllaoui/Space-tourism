@@ -84,3 +84,40 @@ nav {
     }
 
 }
+
+@media (max-width: 768px) {
+    nav {
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 0 1rem;
+
+        .sphere {
+            width: 48px;
+            height: 48px;
+        }
+
+        .line {
+            display: none;
+        }
+
+        .nav-item-blur {
+            .nav-item-container {
+                .nav-item {
+                    .numero {
+                        display: none;
+                    }
+
+                    .label {
+                        font-family: 'Barlow-Condensed';
+                        font-size: 14px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: normal;
+                        letter-spacing: 2.362px;
+                    }
+                }
+            }
+        }
+    }
+}
