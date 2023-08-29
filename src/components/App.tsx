@@ -24,9 +24,12 @@ function App() {
   };
 
   const [techId, setTechId] = useState(0);
+  const [width, setWidth] = useState('');
   let tech: TechContextType = {
     id: techId,
-    setId: setTechId
+    setId: setTechId,
+    width: width,
+    setWidth: setWidth
   }
 
 

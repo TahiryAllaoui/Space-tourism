@@ -6,6 +6,9 @@
     width: 100%;
     height: 100%;
     padding: 0 10rem;
+    height: 1024px;
+    width: 91.7%;
+
 
     .title {
         color: #FFF;
@@ -33,14 +36,15 @@
     .container {
         color: #FFF;
         display: flex;
-        display: flex;
         justify-content: space-between;
         align-items: center;
         width: 100%;
-        height: 55%;
+        height: 40%;
+
 
         .content {
             width: 70%;
+            padding-top: 3rem;
             display: flex;
             align-items: flex-start;
 
@@ -109,20 +113,107 @@
 
         .sary {
             position: absolute;
-            left: 68%;
-            top: -5%;
-            position: absolute;
+            left: 57rem;
+            top: 12rem;
+            background-repeat: no-repeat;
+            background-size: contain;
             width: 450px;
-            height: 858px;
+            height: 450px;
             display: flex;
             align-items: center;
             justify-content: flex-end;
+        }
+    }
+}
 
-            img {
+@media (max-width: 768px) {
+    .tech {
+        background: url('../assets/technology/background-technology-tablet.jpg') no-repeat;
+        background-size: cover;
+        width: 100%;
+        height: 100%;
+        padding: 0 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        gap: 14.2rem;
+
+        .title {
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            letter-spacing: 3.375px;
+            text-transform: uppercase;
+
+            span {
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: normal;
+                letter-spacing: 3.375px;
+            }
+        }
+
+        .container {
+            width: 91.3%;
+            justify-content: center;
+            height: 100%;
+
+            .content {
+                flex-direction: column;
+                align-items: center;
+
+                .numero {
+                    flex-direction: row;
+                    height: 100%;
+                    padding: 0;
+
+                    .numero-item {
+                        width: 60px;
+                        height: 60px;
+                    }
+
+                }
+
+                .description {
+
+                    h3 {
+                        margin: 2rem 0 0.6rem 0;
+                        font-size: 16px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: normal;
+                        letter-spacing: 2.7px;
+                        text-align: center;
+                    }
+
+                    h2 {
+                        text-align: center;
+                        font-size: 40px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: normal;
+                        text-transform: uppercase;
+                    }
+
+                    p {
+                        width: 458px;
+                        text-align: center;
+                        font-size: 16px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 28px;
+                    }
+                }
+            }
+
+            .sary {
+                top: 15rem;
+                left: 0;
                 width: 100%;
                 height: auto;
             }
         }
     }
-
 }

@@ -7,7 +7,7 @@ export interface TechContextType {
 
 const TechContexe = createContext<TechContextType>({
     id: 0,
-    setId: (_val: number) => { }
+    setId: (_val: number) => { },
 })
 
 export default TechContexe;

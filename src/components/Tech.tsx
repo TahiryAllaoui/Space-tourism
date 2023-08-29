@@ -2,8 +2,11 @@ import '../style/Tech.scss';
 import vehicle from '../assets/technology/image-launch-vehicle-portrait.jpg';
 import port from '../assets/technology/image-spaceport-portrait.jpg';
 import capsule from '../assets/technology/image-space-capsule-portrait.jpg';
+import vehicleT from '../assets/technology/image-launch-vehicle-landscape.jpg';
+import portT from '../assets/technology/image-spaceport-landscape.jpg';
+import capsuleT from '../assets/technology/image-space-capsule-landscape.jpg';
 import TechContexe from '../context/techContext';
-import { useContext } from 'react';
+import { useContext, useEffect, useState } from 'react';
 
 interface data {
     name: string;
@@ -11,6 +14,7 @@ interface data {
 }
 
 const Tech = () => {
+    let body = document.querySelector('body') as HTMLElement;
     const techContext = useContext(TechContexe)
 
     const datas: data[] = [{
@@ -27,10 +31,16 @@ const Tech = () => {
     }]
 
     const datasItem = [vehicle, port, capsule];
+    const datasItemTablet = [vehicleT, portT, capsuleT];
 
     const handleClick = (i: number) => {
         techContext!.setId(i);
     };
+
+    const [photo, setPhoto] = useState('');
+    useEffect(() => {
+        body.clientWidth <= 768 ? setPhoto(datasItemTablet[techContext!.id]) : setPhoto(datasItem[techContext!.id])
+    }, [techContext!.id])
 
     return (
         <div className="tech">
@@ -46,9 +56,9 @@ const Tech = () => {
                         <p>{datas[techContext!.id].description}</p>
                     </div>
                 </div>
-                <div className='sary' style={{ backgroundImage: datasItem[techContext!.id] }} >
-                    <img src={datasItem[techContext!.id]} alt="" />
-                </div>
+                {/* <div className='sary' style={{ backgroundImage: `url(${photo})` }}></div> */}
+                {/* <img className='sary' src={photo} /> */}
+                {body.clientWidth <= 768 ? <img className='sary' src={datasItemTablet[techContext!.id]} /> : <img className='sary' src={datasItem[techContext!.id]} />}
             </div>
         </div>
     );
