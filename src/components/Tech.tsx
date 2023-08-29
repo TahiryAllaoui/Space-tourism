@@ -6,7 +6,7 @@ import vehicleT from '../assets/technology/image-launch-vehicle-landscape.jpg';
 import portT from '../assets/technology/image-spaceport-landscape.jpg';
 import capsuleT from '../assets/technology/image-space-capsule-landscape.jpg';
 import TechContexe from '../context/techContext';
-import { useContext, useEffect, useState } from 'react';
+import { useContext } from 'react';
 
 interface data {
     name: string;
@@ -37,11 +37,6 @@ const Tech = () => {
         techContext!.setId(i);
     };
 
-    const [photo, setPhoto] = useState('');
-    useEffect(() => {
-        body.clientWidth <= 768 ? setPhoto(datasItemTablet[techContext!.id]) : setPhoto(datasItem[techContext!.id])
-    }, [techContext!.id])
-
     return (
         <div className="tech">
             <h2 className='title'><span>03 </span>SPACE LAUNCH 101</h2>
@@ -56,8 +51,6 @@ const Tech = () => {
                         <p>{datas[techContext!.id].description}</p>
                     </div>
                 </div>
-                {/* <div className='sary' style={{ backgroundImage: `url(${photo})` }}></div> */}
-                {/* <img className='sary' src={photo} /> */}
                 {body.clientWidth <= 768 ? <img className='sary' src={datasItemTablet[techContext!.id]} /> : <img className='sary' src={datasItem[techContext!.id]} />}
             </div>
         </div>
