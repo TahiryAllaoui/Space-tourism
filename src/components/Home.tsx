@@ -15,13 +15,13 @@ const Home = () => {
                 </div>
                 <div className='my-button'>
                     <div className='hovering'>
-                        <div className='hovering-inner'></div>
+                        <div className='hovering-inner'>
+                            <Link to='/destination' className='big-button'>
+                                EXPLORE
+                            </Link>
+                        </div>
                     </div>
-                    <Link to='/destination' className='big-button'>
-                        EXPLORE
-                    </Link>
                 </div>
-
             </div>
         </div>
     );

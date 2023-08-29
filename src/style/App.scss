@@ -14,10 +14,23 @@
 
 @media (max-width: 768px) {
   .app {
-    height: 1024px;
+    height: 100vh;
   }
 
   #root {
-    height: 1024px;
+    height: 100vh;
+  }
+
+}
+
+@media (max-width: 375px) {
+  .app {
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: 100vh;
+  }
+
+  #root {
+    height: 100vh;
   }
 }
