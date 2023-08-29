@@ -37,7 +37,7 @@ const Navbar = () => {
         let blur = document.querySelector('.nav-item-blur') as HTMLElement;
         let hiMenu = document.querySelector('#hi-menu') as HTMLElement;
         hiX.style.left = '19.5rem';
-        blur.style.left = '45%';
+        blur.style.left = '30%';
         hiMenu.style.display = 'none';
     };
 
