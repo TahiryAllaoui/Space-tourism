@@ -1,6 +1,5 @@
 import '../style/Crew.scss'
 import { useContext } from 'react'
-import { CSSTransition } from 'react-transition-group';
 import douglas from '../assets/crew/image-douglas-hurley.png'
 import anousheh from '../assets/crew/image-anousheh-ansari.png'
 import mark from '../assets/crew/image-mark-shuttleworth.png'
@@ -44,26 +43,25 @@ const Crew = () => {
     };
 
     return (
-        <CSSTransition>
-            <div className="crew">
-                <div className="container" style={{ backgroundImage: `url(${dataItems[crewContext!.id]})` }}>
-                    <div className="title">
-                        <h2><span>02 </span> MEET YOUR CREW</h2>
-                    </div>
-                    <div className="content" >
-                        <h3>{datas[crewContext!.id].role}</h3>
-                        <h2>{datas[crewContext!.id].name}</h2>
-                        <p>{datas[crewContext!.id].bio}</p>
-                    </div>
-                    <div className="sphere-button">
-                        {
-                            [0, 1, 2, 3].map((i) => <div className={`sphere-${i}`} key={i} onClick={() => handleClick(i)}
-                                style={crewContext!.id == i ? { opacity: '100%' } : { opacity: '0.1744' }}></div>)
-                        }
-                    </div>
+        <div className="crew">
+            <div className="container" >
+                <div className="title">
+                    <h2><span>02 </span> MEET YOUR CREW</h2>
+                </div>
+                <img src={dataItems[crewContext!.id]} alt="" id='sary' />
+                <div className="sphere-button">
+                    {
+                        [0, 1, 2, 3].map((i) => <div className={`sphere-${i}`} key={i} onClick={() => handleClick(i)}
+                            style={crewContext!.id == i ? { opacity: '100%' } : { opacity: '0.1744' }}></div>)
+                    }
+                </div>
+                <div className="content" >
+                    <h3>{datas[crewContext!.id].role}</h3>
+                    <h2>{datas[crewContext!.id].name}</h2>
+                    <p>{datas[crewContext!.id].bio}</p>
                 </div>
             </div>
-        </CSSTransition>
+        </div>
     );
 };
 

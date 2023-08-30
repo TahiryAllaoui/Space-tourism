@@ -20,6 +20,14 @@
         justify-content: flex-start;
         gap: 2rem;
 
+        #sary {
+            position: absolute;
+            top: 13rem;
+            left: 50rem;
+            width: max-content;
+            height: 30rem;
+        }
+
         .title {
             h2 {
                 color: #FFF;
@@ -131,6 +139,7 @@
         padding: 0 2rem;
         height: 1024px;
         width: 91.7%;
+        overflow: hidden;
 
 
         .container {
@@ -143,6 +152,13 @@
             gap: 0;
             background-size: 350px;
             background-position-x: center;
+
+            #sary {
+                top: 40rem;
+                left: 12rem;
+                width: 23rem;
+                height: 25rem;
+            }
 
 
             .title {
@@ -203,6 +219,104 @@
             .sphere-button {
                 top: 28rem;
                 left: 11.7rem;
+            }
+
+        }
+    }
+}
+
+@media (max-width: 375px) {
+    .crew {
+        background: url('../assets/crew/background-crew-mobile.jpg') no-repeat fixed;
+        background-size: cover;
+        padding: 0;
+        margin: 0;
+        overflow-x: hidden;
+        overflow-y: auto;
+        height: 100%;
+        width: 100%;
+
+
+        .container {
+            padding: 6rem 0 0 0;
+            margin: 0;
+            height: 100%;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            gap: 0;
+            background-size: 350px;
+            background-position-x: center;
+
+            #sary {
+                position: unset;
+                width: max-content;
+                height: 15rem;
+                border-bottom: #D0D6F9 2px solid;
+                margin: 2rem 0;
+            }
+
+
+            .title {
+                width: 100%;
+
+                h2 {
+                    padding: 0;
+                    margin: 0;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: normal;
+                    letter-spacing: 3.375px;
+                    text-transform: uppercase;
+                    text-align: center;
+
+
+                    span {
+                        font-size: 16px;
+                        font-style: normal;
+                        font-weight: 700;
+                        line-height: normal;
+                        letter-spacing: 3.375px;
+                        text-align: center;
+                    }
+                }
+            }
+
+            .content {
+                margin: 2rem 0 0 0;
+
+                h3 {
+                    text-align: center;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: normal;
+                    text-transform: uppercase;
+                }
+
+                h2 {
+                    text-align: center;
+                    font-size: 24px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: normal;
+                    text-transform: uppercase;
+                }
+
+                p {
+                    text-align: center;
+                    width: 327px;
+                    font-size: 15px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 25px;
+                }
+            }
+
+            .sphere-button {
+                position: unset;
             }
 
         }
