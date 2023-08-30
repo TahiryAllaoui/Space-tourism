@@ -263,6 +263,26 @@
         height: 100%;
         width: 100%;
 
+        .title {
+            padding-top: 6rem;
+            width: 100%;
+            text-align: center;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            letter-spacing: 2.7px;
+            text-transform: uppercase;
+
+            span {
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: normal;
+                letter-spacing: 2.7px;
+            }
+        }
+
         .container {
             width: 100%;
             height: 100%;
@@ -271,25 +291,6 @@
             justify-content: unset;
             gap: 3rem;
 
-            .title {
-                padding-top: 6rem;
-                width: 100%;
-                text-align: center;
-                font-size: 16px;
-                font-style: normal;
-                font-weight: 400;
-                line-height: normal;
-                letter-spacing: 2.7px;
-                text-transform: uppercase;
-
-                span {
-                    font-size: 16px;
-                    font-style: normal;
-                    font-weight: 700;
-                    line-height: normal;
-                    letter-spacing: 2.7px;
-                }
-            }
 
 
             img {
