@@ -90,7 +90,7 @@ nav {
 
 }
 
-@media (max-width: 768px) {
+@media (max-width: 820px) {
     nav {
         top: 0;
         left: 0;
@@ -132,44 +132,45 @@ nav {
     }
 }
 
-@media (max-width: 375px) {
+@media (max-width: 428px) {
     nav {
         top: 0;
         left: 0;
         width: 100%;
-        padding: 0 1rem;
+        padding: 0 0rem;
         z-index: 5;
         backdrop-filter: blur(45px);
         box-shadow: 0px 0px 5px 2px rgba(135, 134, 134, 0.163);
-        height: 10%;
+        height: 50px;
 
-        #hi-X {
-            display: block;
-            position: absolute;
-            z-index: 6;
-            top: 0.6rem;
-            // left: 19.5rem;
-            left: 23.35rem;
-            font-size: 3rem;
-            color: #ffffff;
-            cursor: pointer;
+        .nav-container {
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            align-items: center;
+
+            #hi-menu {
+                padding: 0 1rem;
+                display: block;
+                cursor: pointer;
+                // position: absolute;
+                // z-index: 4;
+                // top: 0.6rem;
+                // left: 19.5rem;
+                font-size: 3rem;
+                color: #ffffff;
+            }
+
+            .sphere {
+                padding: 0 1rem;
+                width: 40px;
+                height: 40px;
+            }
+
         }
 
-        #hi-menu {
-            display: block;
-            cursor: pointer;
-            position: absolute;
-            z-index: 4;
-            top: 0.6rem;
-            left: 19.5rem;
-            font-size: 3rem;
-            color: #ffffff;
-        }
 
-        .sphere {
-            width: 40px;
-            height: 40px;
-        }
+
 
         .line {
             display: none;
@@ -178,13 +179,29 @@ nav {
         .nav-item-blur {
             position: absolute;
             top: 0;
-            left: 23.35rem;
+            left: 100%;
             width: 100%;
             height: 100vh;
             padding: 0;
             margin: 0;
             transition: all 200ms ease-out;
 
+            .X {
+                position: absolute;
+                top: 0;
+                left: 0rem;
+                width: 100%;
+                display: flex;
+                justify-content: flex-end;
+
+                #hi-X {
+                    display: block;
+                    font-size: 3rem;
+                    color: #ffffff;
+                    cursor: pointer;
+                    padding-right: 33%;
+                }
+            }
 
             .nav-item-container {
                 padding: 15rem 0 0 2rem;

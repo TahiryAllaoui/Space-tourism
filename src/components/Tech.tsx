@@ -40,7 +40,7 @@ const Tech = () => {
     return (
         <div className="tech">
             <h2 className='title'><span>03 </span>SPACE LAUNCH 101</h2>
-            {body.clientWidth <= 768 ? <img className='sary' src={datasItemTablet[techContext!.id]} /> : <img className='sary' src={datasItem[techContext!.id]} />}
+            {body.clientWidth <= 820 ? <img className='sary' src={datasItemTablet[techContext!.id]} /> : <img className='sary' src={datasItem[techContext!.id]} />}
             <div className="container">
                 <div className="content">
                     <div className="numero">
