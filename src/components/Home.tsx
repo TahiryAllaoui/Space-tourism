@@ -1,8 +1,30 @@
 import { Link } from 'react-router-dom';
+import { useContext, useEffect } from 'react'
 import '../style/Home.scss'
+import homeBg from '../assets/home/background-home-desktop.jpg'
+import homeBgTablet from '../assets/home/background-home-tablet.jpg'
+import homeBgMobile from '../assets/home/background-home-mobile.jpg'
+import BackgroundContext from '../context/BackgroundContext';
 
 
 const Home = () => {
+    const bgContext = useContext(BackgroundContext);
+
+    useEffect(() => {
+        let app = document.querySelector('.app') as HTMLElement
+        if (app.clientWidth > 820) {
+            bgContext.setPath(homeBg);
+        }
+        else if (app.clientWidth < 428) {
+            bgContext.setPath(homeBgMobile);
+        }
+        else {
+            bgContext.setPath(homeBgTablet);
+        }
+    }, [])
+
+
+
     return (
         <div className="home">
             <div className="container">

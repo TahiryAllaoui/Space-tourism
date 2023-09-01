@@ -1,10 +1,15 @@
 import '../style/Crew.scss'
-import { useContext } from 'react'
+import { useContext, useEffect } from 'react'
 import douglas from '../assets/crew/image-douglas-hurley.png'
 import anousheh from '../assets/crew/image-anousheh-ansari.png'
 import mark from '../assets/crew/image-mark-shuttleworth.png'
 import victor from '../assets/crew/image-victor-glover.png'
 import CrewContexe from '../context/crewContext'
+import crewBg from '../assets/crew/background-crew-desktop.jpg'
+import crewBgTablet from '../assets/crew/background-crew-tablet.jpg'
+import crewBgMobile from '../assets/crew/background-crew-mobile.jpg'
+import BackgroundContext from '../context/BackgroundContext'
+
 
 interface data {
     name: string;
@@ -13,7 +18,7 @@ interface data {
 };
 
 const Crew = () => {
-
+    const bgContext = useContext(BackgroundContext);
     const crewContext = useContext(CrewContexe);
 
     const datas: data[] = [{
@@ -41,6 +46,19 @@ const Crew = () => {
     const handleClick = (i: number) => {
         crewContext!.setId(i);
     };
+
+    useEffect(() => {
+        let app = document.querySelector('.app') as HTMLElement
+        if (app.clientWidth > 820) {
+            bgContext.setPath(crewBg);
+        }
+        else if (app.clientWidth < 428) {
+            bgContext.setPath(crewBgMobile);
+        }
+        else {
+            bgContext.setPath(crewBgTablet);
+        }
+    }, [])
 
     return (
         <div className="crew">

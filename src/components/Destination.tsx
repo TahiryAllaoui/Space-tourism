@@ -3,8 +3,12 @@ import moon from '../assets/destination/image-moon.png';
 import mars from '../assets/destination/image-mars.png';
 import europa from '../assets/destination/image-europa.png';
 import titan from '../assets/destination/image-titan.png';
-import { useContext } from 'react'
+import { useContext, useEffect } from 'react'
 import DestinationContexe from '../context/destinationContext';
+import destinationBg from '../assets/destination/background-destination-desktop.jpg'
+import destinationBgTablet from '../assets/destination/background-destination-tablet.jpg'
+import destinationBgMobile from '../assets/destination/background-destination-mobile.jpg'
+import BackgroundContext from '../context/BackgroundContext';
 
 interface data {
     links: string;
@@ -16,6 +20,7 @@ interface data {
 }
 
 const Destination = () => {
+    const bgContext = useContext(BackgroundContext);
     const destinationContext = useContext(DestinationContexe)
 
     const datas: data[] = [{
@@ -55,6 +60,20 @@ const Destination = () => {
     const handleClick = (i: number) => {
         destinationContext!.setId(i);
     };
+
+
+    useEffect(() => {
+        let app = document.querySelector('.app') as HTMLElement
+        if (app.clientWidth > 820) {
+            bgContext.setPath(destinationBg);
+        }
+        else if (app.clientWidth < 428) {
+            bgContext.setPath(destinationBgMobile);
+        }
+        else {
+            bgContext.setPath(destinationBgTablet);
+        }
+    }, [])
 
     return (
         <div className="destination">

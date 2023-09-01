@@ -6,7 +6,13 @@ import vehicleT from '../assets/technology/image-launch-vehicle-landscape.jpg';
 import portT from '../assets/technology/image-spaceport-landscape.jpg';
 import capsuleT from '../assets/technology/image-space-capsule-landscape.jpg';
 import TechContexe from '../context/techContext';
-import { useContext } from 'react';
+import { useContext, useEffect } from 'react';
+import techBg from '../assets/technology/background-technology-desktop.jpg'
+import techBgTablet from '../assets/technology/background-technology-tablet.jpg'
+import techBgMobile from '../assets/technology/background-technology-mobile.jpg'
+import BackgroundContext from '../context/BackgroundContext';
+
+
 
 interface data {
     name: string;
@@ -14,6 +20,7 @@ interface data {
 }
 
 const Tech = () => {
+    const bgContext = useContext(BackgroundContext);
     let body = document.querySelector('body') as HTMLElement;
     const techContext = useContext(TechContexe)
 
@@ -36,6 +43,20 @@ const Tech = () => {
     const handleClick = (i: number) => {
         techContext!.setId(i);
     };
+
+    useEffect(() => {
+        let app = document.querySelector('.app') as HTMLElement
+        if (app.clientWidth > 820) {
+            bgContext.setPath(techBg);
+        }
+        else if (app.clientWidth < 428) {
+            bgContext.setPath(techBgMobile);
+        }
+        else {
+            bgContext.setPath(techBgTablet);
+        }
+    }, [])
+
 
     return (
         <div className="tech">

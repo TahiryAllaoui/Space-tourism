@@ -9,6 +9,7 @@ import Crew from './Crew'
 import CrewContexe, { CrewContextType } from '../context/crewContext'
 import Tech from './Tech'
 import TechContexe, { TechContextType } from '../context/techContext'
+import BackgroundContext, { BackgroundContextType } from '../context/BackgroundContext'
 
 function App() {
   const [destinationId, setDestinationId] = useState(0);
@@ -29,24 +30,32 @@ function App() {
     setId: setTechId,
   }
 
+  const [background, setBackground] = useState('');
+  let bg: BackgroundContextType = {
+    path: background,
+    setPath: setBackground,
+  }
+
 
   return (
     <BrowserRouter>
-      <DestinationContexe.Provider value={destination}>
-        <CrewContexe.Provider value={crew}>
-          <TechContexe.Provider value={tech}>
-            <div className='app'>
-              <Navbar />
-              <Routes>
-                <Route path='/' element={<Home />} />
-                <Route path='/destination' element={<Destination />} />
-                <Route path='/crew' element={<Crew />} />
-                <Route path='/technology' element={<Tech />} />
-              </Routes>
-            </div>
-          </TechContexe.Provider>
-        </CrewContexe.Provider>
-      </DestinationContexe.Provider>
+      <BackgroundContext.Provider value={bg}>
+        <DestinationContexe.Provider value={destination}>
+          <CrewContexe.Provider value={crew}>
+            <TechContexe.Provider value={tech}>
+              <div className='app' style={{ background: `url(${background}) no-repeat` }}>
+                <Navbar />
+                <Routes>
+                  <Route path='/' element={<Home />} />
+                  <Route path='/destination' element={<Destination />} />
+                  <Route path='/crew' element={<Crew />} />
+                  <Route path='/technology' element={<Tech />} />
+                </Routes>
+              </div>
+            </TechContexe.Provider>
+          </CrewContexe.Provider>
+        </DestinationContexe.Provider>
+      </BackgroundContext.Provider>
     </BrowserRouter>
   )
 }

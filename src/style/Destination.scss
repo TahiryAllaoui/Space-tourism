@@ -15,11 +15,11 @@
 }
 
 .destination {
-    background: url('../assets/destination/background-destination-desktop.jpg') no-repeat;
-    background-size: cover;
     width: 100%;
     height: 100%;
-    padding: 0 10rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 
     .title {
         color: #FFF;
@@ -30,8 +30,7 @@
         line-height: normal;
         letter-spacing: 4.725px;
         text-transform: uppercase;
-        padding-top: 10rem;
-        margin: 0 0 3rem 0;
+        padding: 0 0 0 10rem;
 
         span {
             color: rgba(255, 255, 255, 0.364);
@@ -43,119 +42,117 @@
             letter-spacing: 4.725px;
         }
     }
-}
 
-.container {
-    color: #FFF;
-    display: flex;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 80%;
-    height: 55%;
-    animation: 1s 'fade' ease-out;
 
-    img {
-        width: 25rem;
-        height: 25rem;
-    }
+    .container {
+        color: #FFF;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 100%;
+        animation: 1s 'fade' ease-out;
 
-    .content-text {
-        width: 50%;
-
-        .inner-nav {
-            display: flex;
-            justify-content: space-between;
-            width: 50%;
-
-            div {
-                transition: all 200ms ease;
-                cursor: pointer;
-                width: fit-content;
-                padding: 1rem 0;
-                color: #FFF;
-                font-family: 'Barlow-Condensed';
-                font-size: 1.2rem;
-                font-style: normal;
-                font-weight: 400;
-                line-height: normal;
-                letter-spacing: 2.7px;
-                border-bottom: 2px solid transparent;
-
-                &:hover {
-                    border-bottom: 2px solid white;
-                }
-            }
+        img {
+            width: 25rem;
+            height: 25rem;
         }
 
-        .destination-description {
-            transition: all opacity 3000;
+        .content-text {
+            width: 40%;
+            height: 100%;
 
-            h2 {
-                padding: 0;
-                margin: 0;
-                color: #FFF;
-                font-family: 'Bellefair';
-                font-size: 100px;
-                font-style: normal;
-                font-weight: 400;
-                line-height: normal;
-                text-transform: uppercase;
-            }
+            .inner-nav {
+                display: flex;
+                justify-content: space-between;
+                width: 50%;
 
-            p {
-                padding: 0 0 1rem 0;
-                margin: 0;
-                width: 444px;
-                color: #D0D6F9;
-                font-family: 'Barlow';
-                font-size: 18px;
-                font-style: normal;
-                font-weight: 400;
-                line-height: 32px;
-            }
-        }
-
-        .destination-detail {
-            border-top: 2px #383B4B solid;
-            display: flex;
-            width: 100%;
-            justify-content: flex-start;
-            gap: 10rem;
-
-            .distance,
-            .time {
-                h3 {
-                    color: #D0D6F9;
+                div {
+                    transition: all 200ms ease;
+                    cursor: pointer;
+                    width: fit-content;
+                    padding: 1rem 0;
+                    color: #FFF;
                     font-family: 'Barlow-Condensed';
-                    font-size: 14px;
+                    font-size: 1.2rem;
                     font-style: normal;
                     font-weight: 400;
                     line-height: normal;
-                    letter-spacing: 2.362px;
+                    letter-spacing: 2.7px;
+                    border-bottom: 2px solid transparent;
+
+                    &:hover {
+                        border-bottom: 2px solid white;
+                    }
+                }
+            }
+
+            .destination-description {
+                transition: all opacity 3000;
+
+                h2 {
+                    padding: 0;
+                    margin: 0;
+                    color: #FFF;
+                    font-family: 'Bellefair';
+                    font-size: 100px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: normal;
                     text-transform: uppercase;
                 }
 
                 p {
+                    padding: 0 0 1rem 0;
                     margin: 0;
-                    color: #FFF;
-                    font-family: "Bellefair";
-                    font-size: 28px;
+                    width: 100%;
+                    color: #D0D6F9;
+                    font-family: 'Barlow';
+                    font-size: 18px;
                     font-style: normal;
                     font-weight: 400;
-                    line-height: normal;
-                    text-transform: uppercase;
+                    line-height: 32px;
                 }
             }
 
+            .destination-detail {
+                border-top: 2px #383B4B solid;
+                display: flex;
+                width: 100%;
+                justify-content: flex-start;
+                gap: 10rem;
+
+                .distance,
+                .time {
+                    h3 {
+                        color: #D0D6F9;
+                        font-family: 'Barlow-Condensed';
+                        font-size: 14px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: normal;
+                        letter-spacing: 2.362px;
+                        text-transform: uppercase;
+                    }
+
+                    p {
+                        margin: 0;
+                        color: #FFF;
+                        font-family: "Bellefair";
+                        font-size: 28px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: normal;
+                        text-transform: uppercase;
+                    }
+                }
+
+            }
         }
     }
 }
 
 @media (max-width: 820px) {
     .destination {
-        background: url('../assets/destination/background-destination-tablet.jpg') no-repeat fixed;
-        background-size: cover;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
@@ -254,12 +251,8 @@
 
 @media (max-width: 428px) {
     .destination {
-        background: url('../assets/destination/background-destination-mobile.jpg') no-repeat fixed;
-        background-size: cover;
         padding: 0;
         margin: 0;
-        overflow-x: hidden;
-        overflow-y: auto;
         height: 100%;
         width: 100%;
 
