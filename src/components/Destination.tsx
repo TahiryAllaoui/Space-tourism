@@ -58,12 +58,28 @@ const Destination = () => {
 
     const dataImages = [moon, mars, europa, titan];
     const handleClick = (i: number) => {
-        destinationContext!.setId(i);
+        let image = document.querySelector('.destination .container img') as HTMLElement;
+        let description = document.querySelector('.destination .container .content-text .destination-description') as HTMLElement;
+        let detail = document.querySelector('.destination .container .content-text .destination-detail') as HTMLElement;
+        image.style.opacity = '0';
+        description.style.opacity = '0'
+        detail.style.opacity = '0'
+        setTimeout(() => {
+            image.style.opacity = '1';
+            description.style.opacity = '1';
+            detail.style.opacity = '1';
+            destinationContext!.setId(i);
+        }, 200)
     };
 
 
     useEffect(() => {
+        let destination = document.querySelector('.destination') as HTMLElement;
         let app = document.querySelector('.app') as HTMLElement
+        destination.style.opacity = '0';
+        setTimeout(() => {
+            destination.style.opacity = '1';
+        }, 200)
         if (app.clientWidth > 820) {
             bgContext.setPath(destinationBg);
         }

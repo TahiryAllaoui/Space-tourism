@@ -20,6 +20,8 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    opacity: 1;
+    transition: opacity 200ms ease-out;
 
     .title {
         color: #FFF;
@@ -30,7 +32,7 @@
         line-height: normal;
         letter-spacing: 4.725px;
         text-transform: uppercase;
-        padding: 0 0 0 10rem;
+        padding: 0 0 0 12%;
 
         span {
             color: rgba(255, 255, 255, 0.364);
@@ -50,11 +52,13 @@
         justify-content: space-evenly;
         align-items: center;
         width: 100%;
-        animation: 1s 'fade' ease-out;
+        height: 100%;
 
         img {
             width: 25rem;
             height: 25rem;
+            opacity: 1;
+            transition: opacity 200ms ease-out;
         }
 
         .content-text {
@@ -87,7 +91,7 @@
             }
 
             .destination-description {
-                transition: all opacity 3000;
+                transition: opacity 200ms ease-out;
 
                 h2 {
                     padding: 0;
@@ -120,6 +124,8 @@
                 width: 100%;
                 justify-content: flex-start;
                 gap: 10rem;
+                transition: opacity 200ms ease-out;
+
 
                 .distance,
                 .time {

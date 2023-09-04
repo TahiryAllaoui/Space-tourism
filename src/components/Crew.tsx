@@ -44,6 +44,7 @@ const Crew = () => {
     const dataItems = [douglas, mark, victor, anousheh];
 
     const handleClick = (i: number) => {
+
         crewContext!.setId(i);
     };
 
@@ -62,22 +63,23 @@ const Crew = () => {
 
     return (
         <div className="crew">
-            <div className="container" >
-                <div className="title">
-                    <h2><span>02 </span> MEET YOUR CREW</h2>
+            <h2 className="title"><span>02 </span> MEET YOUR CREW</h2>
+            <div className="container">
+                <div className="left-content">
+                    <div className="content" >
+                        <h3>{datas[crewContext!.id].role}</h3>
+                        <h2>{datas[crewContext!.id].name}</h2>
+                        <p>{datas[crewContext!.id].bio}</p>
+                    </div>
+                    <div className="sphere-button">
+                        {
+                            [0, 1, 2, 3].map((i) => <div className={`sphere-${i}`} key={i} onClick={() => handleClick(i)}
+                                style={crewContext!.id == i ? { opacity: '100%' } : { opacity: '0.1744' }}></div>)
+                        }
+                    </div>
                 </div>
-                <img src={dataItems[crewContext!.id]} alt="" id='sary' />
-                <div className="sphere-button">
-                    {
-                        [0, 1, 2, 3].map((i) => <div className={`sphere-${i}`} key={i} onClick={() => handleClick(i)}
-                            style={crewContext!.id == i ? { opacity: '100%' } : { opacity: '0.1744' }}></div>)
-                    }
-                </div>
-                <div className="content" >
-                    <h3>{datas[crewContext!.id].role}</h3>
-                    <h2>{datas[crewContext!.id].name}</h2>
-                    <p>{datas[crewContext!.id].bio}</p>
-                </div>
+                <div style={{ backgroundImage: `url(${dataItems[crewContext!.id]})` }} className='bg'></div>
+                {/* <img src={dataItems[crewContext!.id]} alt="" id='sary' /> */}
             </div>
         </div>
     );

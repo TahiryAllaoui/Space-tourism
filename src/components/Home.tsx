@@ -11,7 +11,12 @@ const Home = () => {
     const bgContext = useContext(BackgroundContext);
 
     useEffect(() => {
-        let app = document.querySelector('.app') as HTMLElement
+        let app = document.querySelector('.app') as HTMLElement;
+        let home = document.querySelector('.home') as HTMLElement;
+        home.style.opacity = '0';
+        setTimeout(() => {
+            home.style.opacity = '1';
+        }, 200)
         if (app.clientWidth > 820) {
             bgContext.setPath(homeBg);
         }
