@@ -128,16 +128,10 @@
 
 @media (max-width: 820px) {
     .tech {
-        width: 100%;
-        height: 100%;
-        padding: 0;
-        gap: 0;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
+        align-items: center;
 
         .title {
-            padding-left: 2rem;
+            padding: 0;
             font-size: 20px;
             font-style: normal;
             font-weight: 400;
@@ -156,12 +150,16 @@
 
         .container {
             width: 100%;
-            justify-content: center;
             height: 100%;
+            flex-direction: column-reverse;
+            justify-content: space-evenly;
 
             .content {
                 flex-direction: column;
                 align-items: center;
+                padding: 0;
+                width: unset;
+                height: unset;
 
                 .numero {
                     flex-direction: row;
@@ -205,16 +203,16 @@
                         line-height: 28px;
                     }
                 }
+
+            }
+
+            .sary {
+                width: 100%;
+                height: 40%;
+                background-size: cover;
             }
         }
 
-        .sary {
-            position: unset;
-            top: 15rem;
-            left: 0;
-            width: 101%;
-            height: auto;
-        }
     }
 }
 
