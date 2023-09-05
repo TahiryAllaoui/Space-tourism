@@ -21,23 +21,26 @@ const Navbar = () => {
     }];
     const navLink: string[] = ['/', '/destination', '/crew', 'technology'];
 
+
     //Phone button
     const handleClickX = () => {
         let hiX = document.querySelector('#hi-X') as HTMLElement;
         let blur = document.querySelector('.nav-item-blur') as HTMLElement;
         let hiMenu = document.querySelector('#hi-menu') as HTMLElement;
-        hiX.style.left = '23.35rem';
+        hiX.style.left = '42%';
         blur.style.left = '100%';
         hiMenu.style.display = 'block';
 
     };
 
     const handleClickMenu = () => {
+
         let hiX = document.querySelector('#hi-X') as HTMLElement;
         let blur = document.querySelector('.nav-item-blur') as HTMLElement;
         let hiMenu = document.querySelector('#hi-menu') as HTMLElement;
-        hiX.style.left = '19.5rem';
+        hiX.style.left = '100%';
         blur.style.left = '30%';
+        hiMenu.style.display = 'none';
         hiMenu.style.display = 'none';
     };
 
@@ -45,7 +48,7 @@ const Navbar = () => {
         let hiX = document.querySelector('#hi-X') as HTMLElement;
         let blur = document.querySelector('.nav-item-blur') as HTMLElement;
         let hiMenu = document.querySelector('#hi-menu') as HTMLElement;
-        hiX.style.left = '23.35rem';
+        hiX.style.left = '42%';
         blur.style.left = '100%';
         hiMenu.style.display = 'block';
     };
@@ -63,7 +66,6 @@ const Navbar = () => {
                 <div className="X">
                     <HiX id='hi-X' onClick={handleClickX} />
                 </div>
-                <div className="side-button"></div>
                 <div className="nav-item-container">
                     {[0, 1, 2, 3].map((i) => <Link to={navLink[i]} className='nav-item' key={i} onClick={handleClick}>
                         <div className='numero'>{navItem[i].numero}</div>

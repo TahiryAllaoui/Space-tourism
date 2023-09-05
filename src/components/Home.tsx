@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { useContext, useEffect } from 'react'
+import { useContext, useEffect, useRef } from 'react'
 import '../style/Home.scss'
 import homeBg from '../assets/home/background-home-desktop.jpg'
 import homeBgTablet from '../assets/home/background-home-tablet.jpg'
@@ -26,7 +26,8 @@ const Home = () => {
         else {
             bgContext.setPath(homeBgTablet);
         }
-    }, [])
+    }, []);
+    // const myButton = useRef<HTMLDivElement>(null);
 
 
 
@@ -40,7 +41,8 @@ const Home = () => {
                         if you want to go to space, you might as well genuinely go to outer space and not hover kind of on the edge of it.
                         Well sit back, and relax because we’ll give you a truly out of this world experience!</p>
                 </div>
-                <div className='my-button'>
+                <div className='my-button' >
+
                     <div className='hovering'>
                         <div className='hovering-inner'>
                             <Link to='/destination' className='big-button'>

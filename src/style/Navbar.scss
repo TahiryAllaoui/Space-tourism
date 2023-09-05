@@ -126,11 +126,11 @@ nav {
 
 @media (max-width: 428px) {
     nav {
-        // top: 0;
-        // left: 0;
+        position: fixed;
         width: 100%;
-        padding: 0 0rem;
-        z-index: 5;
+        top: 0;
+        left: 0;
+        padding: 0;
         backdrop-filter: blur(45px);
         box-shadow: 0px 0px 5px 2px rgba(135, 134, 134, 0.163);
         height: 50px;
@@ -145,10 +145,6 @@ nav {
                 padding: 0 1rem;
                 display: block;
                 cursor: pointer;
-                // position: absolute;
-                // z-index: 4;
-                // top: 0.6rem;
-                // left: 19.5rem;
                 font-size: 3rem;
                 color: #ffffff;
             }
@@ -169,39 +165,41 @@ nav {
         }
 
         .nav-item-blur {
-            // position: absolute;
-            // top: 0;
-            // left: 100%;
+            position: absolute;
+            top: 0;
+            z-index: 1;
+            left: 100%;
             width: 100%;
             height: 100vh;
             padding: 0;
             margin: 0;
             transition: all 200ms ease-out;
+            flex-direction: column;
+            align-items: unset;
+            display: flex;
+            flex-direction: column;
+            gap: 5rem;
 
             .X {
-                // position: absolute;
-                // top: 0;
-                // left: 0rem;
                 width: 100%;
+                height: fit-content;
                 display: flex;
-                justify-content: flex-end;
 
                 #hi-X {
                     display: block;
                     font-size: 3rem;
                     color: #ffffff;
                     cursor: pointer;
-                    padding-right: 33%;
+                    padding: 0 0 0 55%;
                 }
             }
 
             .nav-item-container {
-                padding: 15rem 0 0 2rem;
                 flex-direction: column;
                 width: 100%;
                 justify-content: flex-start;
                 gap: 2rem;
-
+                height: fit-content;
 
                 .nav-item {
                     &:hover {

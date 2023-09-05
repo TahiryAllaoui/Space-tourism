@@ -2,17 +2,36 @@
 
 @keyframes glow {
     0% {
-        transform: scale(1);
+        width: 18rem;
+        height: 18rem;
     }
 
     50% {
-        transform: scale(0.9);
+        width: 16rem;
+        height: 16rem;
     }
 
     100% {
-        transform: scale(1);
+        width: 18rem;
+        height: 18rem;
+    }
+}
+
+@keyframes glow-little {
+    0% {
+        width: 12rem;
+        height: 12rem;
     }
 
+    50% {
+        width: 10rem;
+        height: 10rem;
+    }
+
+    100% {
+        width: 12rem;
+        height: 12rem;
+    }
 }
 
 .home {
@@ -67,7 +86,8 @@
         }
 
         .my-button {
-
+            opacity: 1;
+            transition: opacity 100ms linear;
 
             .hovering {
                 margin-top: 5rem;
@@ -78,7 +98,7 @@
                 width: 20rem;
                 height: 20rem;
                 background-color: rgba(255, 255, 255, 0.142);
-                animation: 3000ms 'glow' infinite;
+                animation: glow 3000ms infinite both;
                 box-shadow: 0px 0px 20px 5px rgba(255, 255, 255, 0.194);
 
                 .hovering-inner {
@@ -86,7 +106,7 @@
                     width: 18rem;
                     height: 18rem;
                     border-radius: 100%;
-                    animation: 3500ms 'glow' infinite;
+                    animation: 3000ms glow infinite;
                     box-shadow: 0px 0px 20px 5px rgba(255, 255, 255, 0.341);
                     display: flex;
                     align-items: center;
@@ -181,7 +201,7 @@
             padding: 0;
             margin: 0;
             flex-direction: column;
-            justify-content: unset;
+            justify-content: space-evenly;
             width: 100%;
             height: 100%;
 
@@ -224,18 +244,21 @@
             .my-button {
 
                 .hovering {
-                    width: 15rem;
-                    height: 15rem;
+                    width: 12rem;
+                    height: 12rem;
                     margin-top: 2rem;
+                    animation: glow-little 3000ms infinite both;
+
 
                     .hovering-inner {
-                        width: 12rem;
-                        height: 12rem;
+                        width: 9rem;
+                        height: 9rem;
+                        animation: glow-little 3000ms infinite both;
 
                         .big-button {
-                            width: 10rem;
-                            height: 10rem;
-
+                            width: 6rem;
+                            height: 6rem;
+                            font-size: large;
                         }
                     }
                 }

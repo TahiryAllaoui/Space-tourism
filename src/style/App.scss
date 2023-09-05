@@ -30,6 +30,7 @@
   .app {
     height: 100vh;
     background-size: cover;
+    overflow: auto;
   }
 
   #root {
