@@ -98,7 +98,7 @@
                 width: 20rem;
                 height: 20rem;
                 background-color: rgba(255, 255, 255, 0.142);
-                animation: glow 3000ms infinite both;
+                animation: glow 5000ms infinite both;
                 box-shadow: 0px 0px 20px 5px rgba(255, 255, 255, 0.194);
 
                 .hovering-inner {
@@ -106,7 +106,7 @@
                     width: 18rem;
                     height: 18rem;
                     border-radius: 100%;
-                    animation: 3000ms glow infinite;
+                    animation: 5000ms glow infinite;
                     box-shadow: 0px 0px 20px 5px rgba(255, 255, 255, 0.341);
                     display: flex;
                     align-items: center;
@@ -247,13 +247,13 @@
                     width: 12rem;
                     height: 12rem;
                     margin-top: 2rem;
-                    animation: glow-little 3000ms infinite both;
+                    animation: glow-little 5000ms infinite both;
 
 
                     .hovering-inner {
                         width: 9rem;
                         height: 9rem;
-                        animation: glow-little 3000ms infinite both;
+                        animation: glow-little 5000ms infinite both;
 
                         .big-button {
                             width: 6rem;

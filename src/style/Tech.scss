@@ -219,7 +219,7 @@
 @media (max-width: 428px) {
     .tech {
         padding: 0;
-        margin: 7rem 0 0 0;
+        margin: 3rem 0 0 0;
         height: 100%;
         width: 100%;
 
@@ -243,8 +243,9 @@
 
         .container {
             width: 100%;
-            justify-content: center;
+            justify-content: space-evenly;
             height: 100%;
+
 
             .content {
                 width: 100%;
@@ -302,10 +303,8 @@
             }
 
             .sary {
-                top: 15rem;
-                left: 0;
                 width: 100%;
-                height: auto;
+                height: 25%;
             }
         }
     }
