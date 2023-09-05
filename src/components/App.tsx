@@ -36,14 +36,13 @@ function App() {
     setPath: setBackground,
   }
 
-
   return (
     <BrowserRouter>
       <BackgroundContext.Provider value={bg}>
         <DestinationContexe.Provider value={destination}>
           <CrewContexe.Provider value={crew}>
             <TechContexe.Provider value={tech}>
-              <div className='app' style={{ background: `url(${background}) no-repeat` }}>
+              <div className='app' style={{ backgroundImage: `url(${background})`, backgroundSize: 'cover' }}>
                 <Navbar />
                 <Routes>
                   <Route path='/' element={<Home />} />

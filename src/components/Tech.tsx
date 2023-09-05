@@ -41,11 +41,27 @@ const Tech = () => {
     const datasItemTablet = [vehicleT, portT, capsuleT];
 
     const handleClick = (i: number) => {
-        techContext!.setId(i);
+        let h2 = document.querySelector('.container .content .description h2') as HTMLElement;
+        let p = document.querySelector('.container .content .description p') as HTMLElement;
+        let image = document.querySelector('.container .sary') as HTMLElement;
+        h2.style.opacity = '0';
+        p.style.opacity = '0';
+        image.style.opacity = '0';
+        setTimeout(() => {
+            h2.style.opacity = '1';
+            p.style.opacity = '1';
+            image.style.opacity = '1';
+            techContext!.setId(i);
+        }, 100)
     };
 
     useEffect(() => {
-        let app = document.querySelector('.app') as HTMLElement
+        let tech = document.querySelector('.tech') as HTMLElement;
+        let app = document.querySelector('.app') as HTMLElement;
+        tech.style.opacity = '0';
+        setTimeout(() => {
+            tech.style.opacity = '1';
+        }, 100)
         if (app.clientWidth > 820) {
             bgContext.setPath(techBg);
         }
@@ -61,7 +77,6 @@ const Tech = () => {
     return (
         <div className="tech">
             <h2 className='title'><span>03 </span>SPACE LAUNCH 101</h2>
-            {body.clientWidth <= 820 ? <img className='sary' src={datasItemTablet[techContext!.id]} /> : <img className='sary' src={datasItem[techContext!.id]} />}
             <div className="container">
                 <div className="content">
                     <div className="numero">
@@ -73,6 +88,7 @@ const Tech = () => {
                         <p>{datas[techContext!.id].description}</p>
                     </div>
                 </div>
+                <div className="sary" style={body.clientWidth <= 820 ? { backgroundImage: `url(${datasItemTablet[techContext!.id]})` } : { backgroundImage: `url(${datasItem[techContext!.id]})` }}></div>
             </div>
         </div>
     );

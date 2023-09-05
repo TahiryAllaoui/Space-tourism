@@ -21,7 +21,7 @@
     flex-direction: column;
     justify-content: center;
     opacity: 1;
-    transition: opacity 200ms ease-out;
+    transition: opacity 100ms ease-out;
 
     .title {
         color: #FFF;
@@ -58,12 +58,12 @@
             width: 25rem;
             height: 25rem;
             opacity: 1;
-            transition: opacity 200ms ease-out;
+            transition: opacity 100ms ease-out;
         }
 
         .content-text {
-            width: 40%;
-            height: 100%;
+            width: 30%;
+            height: 25rem;
 
             .inner-nav {
                 display: flex;

@@ -79,7 +79,7 @@ const Destination = () => {
         destination.style.opacity = '0';
         setTimeout(() => {
             destination.style.opacity = '1';
-        }, 200)
+        }, 100)
         if (app.clientWidth > 820) {
             bgContext.setPath(destinationBg);
         }

@@ -44,12 +44,24 @@ const Crew = () => {
     const dataItems = [douglas, mark, victor, anousheh];
 
     const handleClick = (i: number) => {
-
-        crewContext!.setId(i);
+        let content = document.querySelector('.container .left-content .content') as HTMLElement;
+        let image = document.querySelector('.container .bg') as HTMLElement;
+        content.style.opacity = '0';
+        image.style.opacity = '0';
+        setTimeout(() => {
+            crewContext!.setId(i);
+            content.style.opacity = '1';
+            image.style.opacity = '1';
+        }, 100)
     };
 
     useEffect(() => {
+        let crew = document.querySelector('.crew') as HTMLElement;
         let app = document.querySelector('.app') as HTMLElement
+        crew.style.opacity = '0';
+        setTimeout(() => {
+            crew.style.opacity = '1';
+        }, 100)
         if (app.clientWidth > 820) {
             bgContext.setPath(crewBg);
         }
@@ -79,7 +91,6 @@ const Crew = () => {
                     </div>
                 </div>
                 <div style={{ backgroundImage: `url(${dataItems[crewContext!.id]})` }} className='bg'></div>
-                {/* <img src={dataItems[crewContext!.id]} alt="" id='sary' /> */}
             </div>
         </div>
     );

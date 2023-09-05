@@ -16,7 +16,7 @@ const Home = () => {
         home.style.opacity = '0';
         setTimeout(() => {
             home.style.opacity = '1';
-        }, 200)
+        }, 100)
         if (app.clientWidth > 820) {
             bgContext.setPath(homeBg);
         }
