@@ -49,9 +49,9 @@ const Crew = () => {
         content.style.opacity = '0';
         image.style.opacity = '0';
         setTimeout(() => {
-            crewContext!.setId(i);
             content.style.opacity = '1';
             image.style.opacity = '1';
+            crewContext!.setId(i);
         }, 100)
     };
 
@@ -85,8 +85,10 @@ const Crew = () => {
                     </div>
                     <div className="sphere-button">
                         {
-                            [0, 1, 2, 3].map((i) => <div className={`sphere-${i}`} key={i} onClick={() => handleClick(i)}
-                                style={crewContext!.id == i ? { opacity: '100%' } : { opacity: '0.1744' }}></div>)
+                            [0, 1, 2, 3].map((i) => <div className="dot" key={i} onClick={() => handleClick(i)}
+                                style={{
+                                    backgroundColor: i == crewContext!.id ? "white" : "rgba(128, 128, 128, 0.564)"
+                                }}></div>)
                         }
                     </div>
                 </div>

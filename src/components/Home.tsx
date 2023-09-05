@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { useContext, useEffect, useRef } from 'react'
+import { useContext, useEffect } from 'react'
 import '../style/Home.scss'
 import homeBg from '../assets/home/background-home-desktop.jpg'
 import homeBgTablet from '../assets/home/background-home-tablet.jpg'
